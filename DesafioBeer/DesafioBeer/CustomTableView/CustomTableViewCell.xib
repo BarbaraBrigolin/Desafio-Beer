@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="130" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="DesafioBeer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76V-pD-JDi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6yf-NJ-NLJ">
+                                <rect key="frame" x="10" y="15" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eay-LK-eCV"/>
+                                    <constraint firstAttribute="height" constant="100" id="tPf-4o-FUB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Cerveja" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhM-6W-x00">
+                                <rect key="frame" x="130" y="35" width="170" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ly7-Eu-fQR"/>
+                                    <constraint firstAttribute="width" constant="170" id="ckC-PN-8Jk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6yf-NJ-NLJ" firstAttribute="top" secondItem="76V-pD-JDi" secondAttribute="top" constant="15" id="0zX-eN-SDC"/>
+                            <constraint firstItem="6yf-NJ-NLJ" firstAttribute="leading" secondItem="76V-pD-JDi" secondAttribute="leading" constant="10" id="8Wk-5U-emK"/>
+                            <constraint firstAttribute="bottom" secondItem="6yf-NJ-NLJ" secondAttribute="bottom" constant="15" id="KHG-TS-j2e"/>
+                            <constraint firstItem="DhM-6W-x00" firstAttribute="leading" secondItem="6yf-NJ-NLJ" secondAttribute="trailing" constant="20" id="QOl-5U-8Zb"/>
+                            <constraint firstItem="DhM-6W-x00" firstAttribute="centerY" secondItem="76V-pD-JDi" secondAttribute="centerY" id="gIg-gy-HVc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="76V-pD-JDi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="25j-vG-HVd"/>
+                    <constraint firstItem="76V-pD-JDi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3Ib-dD-ZYt"/>
+                    <constraint firstAttribute="bottom" secondItem="76V-pD-JDi" secondAttribute="bottom" id="Fuq-Tp-vMW"/>
+                    <constraint firstAttribute="trailing" secondItem="76V-pD-JDi" secondAttribute="trailing" id="KBP-VY-Bug"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="beerImageView" destination="6yf-NJ-NLJ" id="1i6-wm-MmR"/>
+                <outlet property="nameBeerLabel" destination="DhM-6W-x00" id="XZI-l3-INY"/>
+            </connections>
+            <point key="canvasLocation" x="95.652173913043484" y="60.9375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

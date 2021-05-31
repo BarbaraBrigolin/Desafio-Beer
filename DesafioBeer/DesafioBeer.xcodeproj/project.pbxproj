@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		0365D06426612A2200E1A4E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365D06326612A2200E1A4E9 /* AppDelegate.swift */; };
 		0365D06626612A2200E1A4E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365D06526612A2200E1A4E9 /* SceneDelegate.swift */; };
-		0365D06826612A2200E1A4E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365D06726612A2200E1A4E9 /* ViewController.swift */; };
+		0365D06826612A2200E1A4E9 /* BeerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365D06726612A2200E1A4E9 /* BeerVC.swift */; };
 		0365D06B26612A2200E1A4E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0365D06926612A2200E1A4E9 /* Main.storyboard */; };
 		0365D06D26612A2300E1A4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0365D06C26612A2300E1A4E9 /* Assets.xcassets */; };
 		0365D07026612A2300E1A4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0365D06E26612A2300E1A4E9 /* LaunchScreen.storyboard */; };
+		03D9AF662665145800BDA00E /* DescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D9AF652665145800BDA00E /* DescriptionVC.swift */; };
+		03DA15A22661666500FFFABA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA15A02661666500FFFABA /* CustomTableViewCell.swift */; };
+		03DA15A32661666500FFFABA /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DA15A12661666500FFFABA /* CustomTableViewCell.xib */; };
+		03DA15A926616ADB00FFFABA /* BeerElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA15A826616ADB00FFFABA /* BeerElements.swift */; };
+		03DA15AB26616B2E00FFFABA /* BeerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA15AA26616B2E00FFFABA /* BeerVM.swift */; };
+		03DA15AD2661709000FFFABA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA15AC2661709000FFFABA /* Service.swift */; };
+		03DA15D22662CF7400FFFABA /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA15D12662CF7300FFFABA /* ExtensionUIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0365D06026612A2200E1A4E9 /* DesafioBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0365D06326612A2200E1A4E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0365D06526612A2200E1A4E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0365D06726612A2200E1A4E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0365D06726612A2200E1A4E9 /* BeerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerVC.swift; sourceTree = "<group>"; };
 		0365D06A26612A2200E1A4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0365D06C26612A2300E1A4E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0365D06F26612A2300E1A4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0365D07126612A2300E1A4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03D9AF652665145800BDA00E /* DescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionVC.swift; sourceTree = "<group>"; };
+		03DA15A02661666500FFFABA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		03DA15A12661666500FFFABA /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		03DA15A826616ADB00FFFABA /* BeerElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerElements.swift; sourceTree = "<group>"; };
+		03DA15AA26616B2E00FFFABA /* BeerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerVM.swift; sourceTree = "<group>"; };
+		03DA15AC2661709000FFFABA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		03DA15D12662CF7300FFFABA /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,70 @@
 		0365D06226612A2200E1A4E9 /* DesafioBeer */ = {
 			isa = PBXGroup;
 			children = (
+				03D9AF6426647D4A00BDA00E /* ViewController */,
+				03D9AF6326647D3A00BDA00E /* Network */,
+				03D9AF6226647D3100BDA00E /* ViewModel */,
+				03DA15D02662CF5700FFFABA /* Extension */,
+				03DA159F2661663800FFFABA /* Model */,
+				03DA159E2661662900FFFABA /* CustomTableView */,
 				0365D06326612A2200E1A4E9 /* AppDelegate.swift */,
 				0365D06526612A2200E1A4E9 /* SceneDelegate.swift */,
-				0365D06726612A2200E1A4E9 /* ViewController.swift */,
 				0365D06926612A2200E1A4E9 /* Main.storyboard */,
 				0365D06C26612A2300E1A4E9 /* Assets.xcassets */,
 				0365D06E26612A2300E1A4E9 /* LaunchScreen.storyboard */,
 				0365D07126612A2300E1A4E9 /* Info.plist */,
 			);
 			path = DesafioBeer;
+			sourceTree = "<group>";
+		};
+		03D9AF6226647D3100BDA00E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				03DA15AA26616B2E00FFFABA /* BeerVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03D9AF6326647D3A00BDA00E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				03DA15AC2661709000FFFABA /* Service.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		03D9AF6426647D4A00BDA00E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0365D06726612A2200E1A4E9 /* BeerVC.swift */,
+				03D9AF652665145800BDA00E /* DescriptionVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		03DA159E2661662900FFFABA /* CustomTableView */ = {
+			isa = PBXGroup;
+			children = (
+				03DA15A02661666500FFFABA /* CustomTableViewCell.swift */,
+				03DA15A12661666500FFFABA /* CustomTableViewCell.xib */,
+			);
+			path = CustomTableView;
+			sourceTree = "<group>";
+		};
+		03DA159F2661663800FFFABA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03DA15A826616ADB00FFFABA /* BeerElements.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03DA15D02662CF5700FFFABA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				03DA15D12662CF7300FFFABA /* ExtensionUIImage.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +195,7 @@
 			files = (
 				0365D07026612A2300E1A4E9 /* LaunchScreen.storyboard in Resources */,
 				0365D06D26612A2300E1A4E9 /* Assets.xcassets in Resources */,
+				03DA15A32661666500FFFABA /* CustomTableViewCell.xib in Resources */,
 				0365D06B26612A2200E1A4E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0365D06826612A2200E1A4E9 /* ViewController.swift in Sources */,
+				03DA15AB26616B2E00FFFABA /* BeerVM.swift in Sources */,
+				03D9AF662665145800BDA00E /* DescriptionVC.swift in Sources */,
+				0365D06826612A2200E1A4E9 /* BeerVC.swift in Sources */,
 				0365D06426612A2200E1A4E9 /* AppDelegate.swift in Sources */,
+				03DA15A22661666500FFFABA /* CustomTableViewCell.swift in Sources */,
+				03DA15AD2661709000FFFABA /* Service.swift in Sources */,
+				03DA15D22662CF7400FFFABA /* ExtensionUIImage.swift in Sources */,
+				03DA15A926616ADB00FFFABA /* BeerElements.swift in Sources */,
 				0365D06626612A2200E1A4E9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
