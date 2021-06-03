@@ -19,7 +19,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sVf-5h-c1d">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="Rnx-sf-CUo">
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search your beer here..." id="Rnx-sf-CUo">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -37,7 +37,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Beers" id="Tei-Hn-CcC"/>
                     <connections>
-                        <outlet property="searche" destination="Rnx-sf-CUo" id="bpc-Od-g8y"/>
+                        <outlet property="searchBar" destination="Rnx-sf-CUo" id="Uvg-Jd-ZBc"/>
                         <outlet property="tableView" destination="sVf-5h-c1d" id="EpD-Vz-E5C"/>
                         <segue destination="1yN-L9-LxR" kind="show" identifier="DescriptionVC" id="uWl-Yy-8CP"/>
                     </connections>

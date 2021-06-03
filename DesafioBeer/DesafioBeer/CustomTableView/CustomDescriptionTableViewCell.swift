@@ -28,12 +28,9 @@ class CustomDescriptionTableViewCell: UITableViewCell {
         return UINib(nibName: self.identifier, bundle: nil)
     }
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
     
     func getFood_pairingLabel(data:[String])->String{
         var food:String = ""
@@ -43,7 +40,6 @@ class CustomDescriptionTableViewCell: UITableViewCell {
             }else{
                 food = food + "\n" + value
             }
-           
         }
         return food
     }
@@ -58,5 +54,4 @@ class CustomDescriptionTableViewCell: UITableViewCell {
         self.food_pairingLabel.text = self.getFood_pairingLabel(data:beer?.food_pairing ?? [])
         }
     }
-    
 

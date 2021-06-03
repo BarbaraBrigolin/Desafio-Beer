@@ -33,7 +33,6 @@ class BeerVM{
         self.selectedBeer = value
     }
     
-    
     var countElement:Int{
         return self.getArrayBeer.count
     }

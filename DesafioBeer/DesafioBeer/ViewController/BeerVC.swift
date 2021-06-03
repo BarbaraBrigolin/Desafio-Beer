@@ -11,14 +11,15 @@ class BeerVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var searche: UISearchBar!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
+
     var viewModel:BeerVM = BeerVM()
+    var isCurrentlyEditing:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getBeer()
-        self.searche.delegate = self
+        self.searchBar.delegate = self
        
     }
     
@@ -46,9 +47,6 @@ class BeerVC: UIViewController {
             data?.viewModel =  DescriptionVM(beerElement: self.viewModel.selectedBeer)
         }
     }
-    
-  
-    
 }
 
 extension BeerVC:UITableViewDelegate, UITableViewDataSource{
@@ -73,7 +71,6 @@ extension BeerVC:UITableViewDelegate, UITableViewDataSource{
         self.performSegue(withIdentifier: "DescriptionVC", sender: nil)
     }
     
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete{
@@ -81,24 +78,17 @@ extension BeerVC:UITableViewDelegate, UITableViewDataSource{
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    
-    
-  }
+}
 
 extension BeerVC:UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.viewModel.filterContentForSearchText(searchBar.text ?? "")
         self.tableView.reloadData()
-        
     }
-
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.resignFirstResponder()
+    }
+  
 }
-
-

@@ -13,7 +13,6 @@ class DescriptionVC: UIViewController {
     
     var viewModel:DescriptionVM?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
@@ -23,7 +22,6 @@ class DescriptionVC: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(CustomDescriptionTableViewCell.nib(), forCellReuseIdentifier: CustomDescriptionTableViewCell.identifier)
-        
     }
 }
 
@@ -41,6 +39,4 @@ extension DescriptionVC:UITableViewDelegate, UITableViewDataSource{
         
         return cell ?? UITableViewCell()
     }
-    
-
 }

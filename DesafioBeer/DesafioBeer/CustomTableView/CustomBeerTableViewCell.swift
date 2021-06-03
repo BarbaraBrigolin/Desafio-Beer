@@ -21,8 +21,6 @@ class CustomBeerTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
     }
        
     func configBeer(setup:BeerElements){
@@ -31,8 +29,4 @@ class CustomBeerTableViewCell: UITableViewCell {
         guard let url:URL = URL(string: setup.image_url ?? "") else {return}
         beerImageView.load(url: url)
     }
-    
 }
-
-
-
