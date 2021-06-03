@@ -13,24 +13,25 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomBeerTableViewCell" id="KGk-i7-Jjw" customClass="CustomBeerTableViewCell" customModule="DesafioBeer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76V-pD-JDi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6yf-NJ-NLJ">
-                                <rect key="frame" x="10" y="15.5" width="100" height="99"/>
+                                <rect key="frame" x="10" y="15.5" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="99" id="36Y-9Q-ZEo"/>
                                     <constraint firstAttribute="width" constant="100" id="eay-LK-eCV"/>
+                                    <constraint firstAttribute="height" constant="100" id="uN4-h1-Uqk"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Cerveja" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhM-6W-x00">
-                                <rect key="frame" x="130" y="55.5" width="170" height="19.5"/>
+                                <rect key="frame" x="130" y="40" width="170" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="ckC-PN-8Jk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="fYS-cp-1JU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -39,11 +40,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="DhM-6W-x00" firstAttribute="centerY" secondItem="76V-pD-JDi" secondAttribute="centerY" id="2k6-Ky-tGk"/>
+                            <constraint firstItem="6yf-NJ-NLJ" firstAttribute="centerY" secondItem="76V-pD-JDi" secondAttribute="centerY" id="48e-vy-RpZ"/>
                             <constraint firstItem="6yf-NJ-NLJ" firstAttribute="leading" secondItem="76V-pD-JDi" secondAttribute="leading" constant="10" id="8Wk-5U-emK"/>
-                            <constraint firstItem="DhM-6W-x00" firstAttribute="centerY" secondItem="76V-pD-JDi" secondAttribute="centerY" id="FiM-4f-7lX"/>
-                            <constraint firstItem="6yf-NJ-NLJ" firstAttribute="centerY" secondItem="76V-pD-JDi" secondAttribute="centerY" id="Fl5-PQ-fLl"/>
                             <constraint firstItem="DhM-6W-x00" firstAttribute="leading" secondItem="6yf-NJ-NLJ" secondAttribute="trailing" constant="20" id="PNC-rP-ed1"/>
-                            <constraint firstAttribute="height" constant="130" id="hcH-KS-ITV"/>
+                            <constraint firstAttribute="height" constant="131" id="dC9-HH-fME"/>
+                            <constraint firstAttribute="bottom" secondItem="DhM-6W-x00" secondAttribute="bottom" constant="40" id="tDr-hv-CSP"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -59,7 +61,7 @@
                 <outlet property="beerImageView" destination="6yf-NJ-NLJ" id="1i6-wm-MmR"/>
                 <outlet property="nameBeerLabel" destination="DhM-6W-x00" id="XZI-l3-INY"/>
             </connections>
-            <point key="canvasLocation" x="95.652173913043484" y="60.9375"/>
+            <point key="canvasLocation" x="95.652173913043484" y="60.602678571428569"/>
         </tableViewCell>
     </objects>
     <resources>
