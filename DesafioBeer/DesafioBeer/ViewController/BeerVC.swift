@@ -46,6 +46,9 @@ class BeerVC: UIViewController {
             data?.viewModel =  DescriptionVM(beerElement: self.viewModel.selectedBeer)
         }
     }
+    
+  
+    
 }
 
 extension BeerVC:UITableViewDelegate, UITableViewDataSource{
@@ -78,6 +81,13 @@ extension BeerVC:UITableViewDelegate, UITableViewDataSource{
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
+    
   }
 
 extension BeerVC:UISearchBarDelegate{
@@ -85,7 +95,9 @@ extension BeerVC:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.viewModel.filterContentForSearchText(searchBar.text ?? "")
         self.tableView.reloadData()
+        
     }
+
     
 }
 
