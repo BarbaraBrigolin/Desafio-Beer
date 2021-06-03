@@ -2,23 +2,23 @@
 import Foundation
 
 // MARK: - Beer
-struct BeerElements: Codable {
-    let id: Int?
-    let name, tagline, firstBrewed, description: String?
-    let image_url: String?
-    let abv: Double?
-    let ibu: Double?
-    let targetFg: Int?
-    let targetOg: Double?
-    let ebc: Int?
-    let srm, ph: Double?
-    let attenuationLevel: Double?
-    let volume, boilVolume: BoilVolume?
-    let method: Method?
-    let ingredients: Ingredients?
-    let food_pairing: [String]?
-    let brewersTips: String?
-    let contributedBy: ContributedBy?
+struct BeerElements: Decodable {
+    let id:Int?
+    let name, tagline, firstBrewed, description:String?
+    let image_url:String?
+    let abv:Double?
+    let ibu:Double?
+    let targetFg:Int?
+    let targetOg:Double?
+    let ebc:Int?
+    let srm, ph:Double?
+    let attenuationLevel:Double?
+    let volume, boilVolume:BoilVolume?
+    let method:Method?
+    let ingredients:Ingredients?
+    let food_pairing:[String]?
+    let brewersTips:String?
+    let contributedBy:ContributedBy?
 
     enum CodingKeys: String, CodingKey {
         case id, name, tagline
@@ -40,46 +40,46 @@ struct BeerElements: Codable {
 }
 
 // MARK: - BoilVolume
-struct BoilVolume: Codable {
-    let value: Double?
-    let unit: Unit?
+struct BoilVolume: Decodable {
+    let value:Double?
+    let unit:Unit?
 }
 
-enum Unit: String, Codable {
+enum Unit: String, Decodable {
     case celsius = "celsius"
     case grams = "grams"
     case kilograms = "kilograms"
     case litres = "litres"
 }
 
-enum ContributedBy: String, Codable {
+enum ContributedBy: String, Decodable {
     case aliSkinnerAliSkinner = "Ali Skinner <AliSkinner>"
     case samMasonSamjbmason = "Sam Mason <samjbmason>"
 }
 
 // MARK: - Ingredients
-struct Ingredients: Codable {
-    let malt: [Malt]?
-    let hops: [Hop]?
-    let yeast: String?
+struct Ingredients: Decodable {
+    let malt:[Malt]?
+    let hops:[Hop]?
+    let yeast:String?
 }
 
 // MARK: - Hop
-struct Hop: Codable {
-    let name: String?
-    let amount: BoilVolume?
-    let add: Add?
-    let attribute: Attribute?
+struct Hop: Decodable {
+    let name:String?
+    let amount:BoilVolume?
+    let add:Add?
+    let attribute:Attribute?
 }
 
-enum Add: String, Codable {
+enum Add: String, Decodable {
     case dryHop = "dry hop"
     case end = "end"
     case middle = "middle"
     case start = "start"
 }
 
-enum Attribute: String, Codable {
+enum Attribute: String, Decodable {
     case aroma = "aroma"
     case attributeFlavour = "Flavour"
     case bitter = "bitter"
@@ -87,15 +87,15 @@ enum Attribute: String, Codable {
 }
 
 // MARK: - Malt
-struct Malt: Codable {
-    let name: String?
-    let amount: BoilVolume?
+struct Malt: Decodable {
+    let name:String?
+    let amount:BoilVolume?
 }
 
 // MARK: - Method
-struct Method: Codable {
-    let mashTemp: [MashTemp]?
-    let fermentation: Fermentation?
+struct Method: Decodable {
+    let mashTemp:[MashTemp]?
+    let fermentation:Fermentation?
     let twist: String?
 
     enum CodingKeys: String, CodingKey {
@@ -105,15 +105,13 @@ struct Method: Codable {
 }
 
 // MARK: - Fermentation
-struct Fermentation: Codable {
-    let temp: BoilVolume?
+struct Fermentation: Decodable {
+    let temp:BoilVolume?
 }
 
 // MARK: - MashTemp
-struct MashTemp: Codable {
-    let temp: BoilVolume?
-    let duration: Int?
+struct MashTemp: Decodable {
+    let temp:BoilVolume?
+    let duration:Int?
 }
-
-typealias Beers = [BeerElements]
 

@@ -7,15 +7,13 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class CustomBeerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var beerImageView: UIImageView!
     
     @IBOutlet weak var nameBeerLabel: UILabel!
     
- 
-    
-    static let identifier:String = "CustomTableViewCell"
+    static let identifier:String = "CustomBeerTableViewCell"
     
     static func nib()->UINib{
         return UINib(nibName: self.identifier, bundle: nil)

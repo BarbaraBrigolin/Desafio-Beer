@@ -27,10 +27,10 @@ class BeerVM{
         }
     }
     
-    var beer:BeerElements?
+    var selectedBeer:BeerElements?
     
     public func selectedBeer(value:BeerElements){
-        self.beer = value
+        self.selectedBeer = value
     }
     
     

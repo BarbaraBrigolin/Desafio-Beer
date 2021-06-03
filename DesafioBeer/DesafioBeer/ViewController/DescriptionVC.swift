@@ -9,39 +9,38 @@ import UIKit
 
 class DescriptionVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var beerImage: UIImageView!
+    var viewModel:DescriptionVM?
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
-    @IBOutlet weak var abvLabel: UILabel!
-    
-    @IBOutlet weak var ibuLabel: UILabel!
-    
-    @IBOutlet weak var food_pairingLabel: UILabel!
-    
-    
-    var beer:BeerElements?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configDetails()
+        configTableView()
     }
     
-    
-    func configDetails(){
-        self.nameLabel.text = String(describing: beer?.name ?? "")
-        self.descriptionLabel.text = String(describing: beer?.description ?? "")
-        self.abvLabel.text = String(describing: beer?.abv )
-        self.ibuLabel.text = String(describing: beer?.ibu )
-        guard let url:URL = URL(string: beer?.image_url ?? "") else {return}
-        beerImage.load(url: url)
+    func configTableView(){
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(CustomDescriptionTableViewCell.nib(), forCellReuseIdentifier: CustomDescriptionTableViewCell.identifier)
+        
     }
+}
+
+extension DescriptionVC:UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.viewModel?.lineNumberCount ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomDescriptionTableViewCell.identifier, for: indexPath) as? CustomDescriptionTableViewCell
+        
+        cell?.configDetails(beer: self.viewModel?.getDetailBeer)
+        
+        return cell ?? UITableViewCell()
+    }
+    
 
 }
-    
-    
-    
-

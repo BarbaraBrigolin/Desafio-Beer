@@ -34,7 +34,7 @@ class BeerVC: UIViewController {
         DispatchQueue.main.async {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
+        self.tableView.register(CustomBeerTableViewCell.nib(), forCellReuseIdentifier: CustomBeerTableViewCell.identifier)
         self.tableView.reloadData()
         }
     }
@@ -43,7 +43,7 @@ class BeerVC: UIViewController {
       
         if segue.identifier == "DescriptionVC"{
             let data:DescriptionVC? = segue.destination as? DescriptionVC
-            data?.beer = self.viewModel.beer
+            data?.viewModel =  DescriptionVM(beerElement: self.viewModel.selectedBeer)
         }
     }
 }
@@ -58,7 +58,7 @@ extension BeerVC:UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: CustomBeerTableViewCell.identifier, for: indexPath) as? CustomBeerTableViewCell
         
         cell?.configBeer(setup: self.viewModel.getArrayBeer[indexPath.row])
     
